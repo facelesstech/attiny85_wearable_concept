@@ -1,0 +1,41 @@
+(export (version D)
+  (design
+    (source /home/facelessloser/Dropbox/kicad/wearable_template/wearable_template.sch)
+    (date "Thu 12 Apr 2018 16:41:24 BST")
+    (tool "Eeschema 4.0.5+dfsg1-4")
+    (sheet (number 1) (name /) (tstamps /)
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source wearable_template.sch)
+        (comment (number 1) (value ""))
+        (comment (number 2) (value ""))
+        (comment (number 3) (value ""))
+        (comment (number 4) (value "")))))
+  (components
+    (comp (ref BT1)
+      (value Battery)
+      (footprint Battery_Holders:Keystone_3034_1x20mm-CoinCell)
+      (libsource (lib device) (part Battery))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5ACE69D9)))
+  (libparts
+    (libpart (lib device) (part Battery)
+      (description "Battery (multiple cells)")
+      (docs ~)
+      (fields
+        (field (name Reference) BT)
+        (field (name Value) Battery))
+      (pins
+        (pin (num 1) (name +) (type passive))
+        (pin (num 2) (name -) (type passive)))))
+  (libraries
+    (library (logical device)
+      (uri /usr/share/kicad/library/device.lib)))
+  (nets
+    (net (code 1) (name "Net-(BT1-Pad1)")
+      (node (ref BT1) (pin 1)))
+    (net (code 2) (name "Net-(BT1-Pad2)")
+      (node (ref BT1) (pin 2)))))
